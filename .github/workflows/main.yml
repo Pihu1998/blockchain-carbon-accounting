@@ -13,8 +13,10 @@ jobs:
       - uses: actions/setup-node@v1
 
       - name: Test for utility-emissions-channel
-        run: cd ./utility-emissions-channel/typescript_app
+        run: 
+          cd ./utility-emissions-channel/typescript_app
       - name: Run manualTests.sh file to start server
-        run: sh ./manualTests.sh
+        run: 
+          sudo sh ./manualTests.sh
       - name: Run tests
         run: mocha ./tests --timeout 10000
