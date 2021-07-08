@@ -15,8 +15,10 @@ jobs:
       - name: Test for utility-emissions-channel
         run: 
           cd ./utility-emissions-channel/typescript_app
-      - name: Run manualTests.sh file to start server
+      - name: Run runManual.sh file to start server
         run: 
-          sudo sh ./manualTests.sh
+          sudo sh ./runManual.sh
       - name: Run tests
-        run: mocha ./tests --timeout 10000
+        run: 
+          cd tests
+          mocha ./tests --timeout 10000
