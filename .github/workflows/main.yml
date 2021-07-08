@@ -16,6 +16,7 @@ jobs:
         run: 
           cd ./utility-emissions-channel/typescript_app
       - name: Run runManual.sh file to start server
+        shell: bash
         run: |
           ls -l ./runManual.sh
           git update-index --chmod +x ./runManual.sh
