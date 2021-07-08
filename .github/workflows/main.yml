@@ -19,8 +19,8 @@ jobs:
         shell: bash
         run: |
           set -x
-          ls -l ./runManual.sh
-          sh ./runManual.sh
+          sudo ls -l ./runManual.sh
+          sudo sh ./runManual.sh
       - name: Run tests
         run: 
           cd tests
