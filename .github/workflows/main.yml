@@ -8,15 +8,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [ '12', '14', '16' ]
-    name: Node ${{ matrix.node }} sample
     steps:
       - uses: actions/checkout@v2
-      - name: Setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node }}
-      - run: npm install
-      - run: npm test
+      - uses: actions/setup-node@v1
+
+      - name: Test for utility-emissions-channel
+        run: cd ./utility-emissions-channel/typescript_app
+      - name: Run manualTests.sh file to start server
+        run: sh ./manualTests.sh
+      - name: Run tests
+        run: mocha ./tests --timeout 10000
