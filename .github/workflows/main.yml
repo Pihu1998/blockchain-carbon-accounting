@@ -18,8 +18,9 @@ jobs:
       - name: Run runManual.sh file to start server
         shell: bash
         run: |
+          set -x
           ls -l ./runManual.sh
-          git update-index --chmod +x ./runManual.sh
+          sh ./runManual.sh
       - name: Run tests
         run: 
           cd tests
