@@ -18,7 +18,7 @@ jobs:
         run: |
           cd ./typescript_app
           ls -la
-          sudo sh ./runManual.sh
+          sh ./runManual.sh
 
       - name: Run tests
         run: 
