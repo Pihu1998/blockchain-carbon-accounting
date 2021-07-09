@@ -20,6 +20,7 @@ jobs:
           ls -la
           npm config set unsafe-perm true
           sudo sh ./runManual.sh
+          sleep 30
 
       - name: Run tests
         run: 
