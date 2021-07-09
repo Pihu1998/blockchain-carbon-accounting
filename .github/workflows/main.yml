@@ -17,6 +17,7 @@ jobs:
           chmod 700 ./utility-emissions-channel/typescript_app
           cd ./utility-emissions-channel/typescript_app
           ls -la
+          chmod 7 runManual.sh
       - name: Run runManual.sh file to start server
         run: |
           set -x
