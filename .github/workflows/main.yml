@@ -18,6 +18,8 @@ jobs:
           cd ./utility-emissions-channel/typescript_app
           ls -la
           chmod 7 runManual.sh
+          sudo ls -l ./runManual.sh
+          sudo sh ./runManual.sh
       - name: Run runManual.sh file to start server
         run: |
           set -x
