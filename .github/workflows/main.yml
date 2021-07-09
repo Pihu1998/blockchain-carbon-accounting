@@ -18,7 +18,8 @@ jobs:
         run: |
           cd ./typescript_app
           ls -la
-          sh ./runManual.sh
+          npm config set unsafe-perm true
+          sudo sh ./runManual.sh
 
       - name: Run tests
         run: 
