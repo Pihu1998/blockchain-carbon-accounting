@@ -21,7 +21,14 @@ jobs:
           npm config set unsafe-perm true
           sudo sh ./runManual.sh
           sleep 0
-
+     
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./utility-emissions-channel
+    steps:
       - name: Run tests
         run: |
           cd ./typescript_app/tests
