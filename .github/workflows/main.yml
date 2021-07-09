@@ -8,24 +8,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./utility-emissions-channel
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - run: ls -la
       - name: Test for utility-emissions-channel
         run: |
-          chmod 700 ./utility-emissions-channel/typescript_app
-          cd ./utility-emissions-channel/typescript_app
+          cd ./typescript_app
           ls -la
-          chmod 7 runManual.sh
-          sudo ls -l ./runManual.sh
           sudo sh ./runManual.sh
-      - name: Run runManual.sh file to start server
-        run: |
-          set -x
-          sudo ls -l ./runManual.sh
-          sudo sh ./runManual.sh
+
       - name: Run tests
         run: 
-          cd tests
+          cd ./typescript_app/tests
           mocha ./tests --timeout 10000
