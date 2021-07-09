@@ -7,7 +7,7 @@ echo "Updating npm..."
 npm update
 
 echo "Installing node modules..."
-npm install
+npm install -g
 
 echo "Installing nodemon..."
 npm install -g nodemon
