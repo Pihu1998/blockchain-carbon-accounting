@@ -24,5 +24,6 @@ jobs:
 
       - name: Run tests
         run: |
+          needs: scale-job 
           cd ./typescript_app/tests
           mocha ./tests --timeout 10000
