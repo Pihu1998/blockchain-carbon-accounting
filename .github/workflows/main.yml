@@ -9,9 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
-      - uses: actions/setup-node@v1
-
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+      - run: ls -la
       - name: Test for utility-emissions-channel
         run: 
           cd ./utility-emissions-channel/typescript_app
