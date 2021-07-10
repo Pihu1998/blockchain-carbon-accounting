@@ -1,16 +1,16 @@
 #!/bin/bash
 
-echo "Removing node modules..."
-rm -rf ./node_modules
-
-echo "Updating npm..."
-npm update
-
 echo "Setting user to root..."
 npm config set user root
 
 echo "Check current user..."
 id -un
+
+echo "Removing node modules..."
+rm -rf ./node_modules
+
+echo "Updating npm..."
+npm update
 
 echo "Installing node modules..."
 npm install -g
