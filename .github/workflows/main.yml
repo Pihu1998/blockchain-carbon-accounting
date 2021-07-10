@@ -17,7 +17,6 @@ jobs:
       - name: Test for utility-emissions-channel
         run: |
           cd ./typescript_app
-          ls -la
           npm config set unsafe-perm true
           sudo sh ./runManual.sh
       
