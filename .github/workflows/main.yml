@@ -23,7 +23,8 @@ jobs:
       
       - name: Run tests
         run: |
-          cd ./typescript_app/tests
+          cd ./typescript_app
+          sudo npm install
           sudo mocha ./tests --timeout 10000    
      
  
