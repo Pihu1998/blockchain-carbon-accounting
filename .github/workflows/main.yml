@@ -19,11 +19,9 @@ jobs:
           cd ./typescript_app
           npm config set unsafe-perm true
           sudo sh ./runManual.sh
+          sudo mocha ./tests --timeout 10000 
       
-      - name: Run tests
-        run: |
-          cd ./typescript_app
-          sudo npm install
-          sudo mocha ./tests --timeout 10000    
+
+             
      
  
