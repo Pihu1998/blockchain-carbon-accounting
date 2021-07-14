@@ -27,7 +27,15 @@ jobs:
           sudo npm install -g mocha
           sudo npm run-script build
           sudo npm run-script start
-          sudo mocha ./tests --timeout 10000 
+      - name: Run tests   
+        run: |
+          cd ./typescript_app
+          npm config set unsafe-perm true
+          npm config set user root
+          sudo mocha ./tests --timeout 10000
+          
+      
+
       
 
              
