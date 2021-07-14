@@ -21,7 +21,12 @@ jobs:
           npm config set user root
           id -un
           sudo npm install -g
+          sudo npm install -g nodemon
+          sudo npm install -g serverless
+          sudo npm install -g typescript
+          sudo npm install -g mocha
           sudo npm run-script build
+          sudo npm run-script start
           sudo mocha ./tests --timeout 10000 
       
 
